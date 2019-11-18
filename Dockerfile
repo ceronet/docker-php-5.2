@@ -278,7 +278,13 @@ RUN mkdir /php && \
     mkdir /usr/lib/php5.2/modules && \
     cp ZendOptimizer-3.3.3-linux-glibc23-x86_64/data/5_2_x_comp/ZendOptimizer.so /usr/lib/php5.2/modules/ && \
 
+    wget http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz && \
+    tar xfz ioncube_loaders_lin_x86-64.tar.gz && \
+    cp ioncube/ioncube_loader_lin_5.2.so /usr/lib/php5.2/lib/extensions/no-debug-non-zts-20060613/ && \
+    
+
     # Clean up
+    rm -Rf ioncube && \
     rm -Rf /php && \
     rm -Rf /var/cache/* && \
     rm -Rf /tmp/pear && \
