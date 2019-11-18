@@ -271,6 +271,7 @@ RUN mkdir /php && \
     # Add extensions
     pecl install Fileinfo && \
     pecl install memcache && \
+    pecl install apc && \
     cd /php && \
     wget http://downloads.zend.com/optimizer/3.3.3/ZendOptimizer-3.3.3-linux-glibc23-x86_64.tar.gz && \
     tar xzf ZendOptimizer-3.3.3-linux-glibc23-x86_64.tar.gz && \
